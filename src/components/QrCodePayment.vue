@@ -179,7 +179,7 @@ const handlePayment = async (qrCode) => {
     // 停止扫描
     clearInterval(scanInterval)
     
-    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/pay`, {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/payment/barcode/pay`, {
       amount: formData.amount,
       authCode: qrCode
     })
